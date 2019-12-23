@@ -1,0 +1,27 @@
+.el-tree-node.is-focusable .el-tree-node__content{
+    height: 45px;
+    line-height: 45px;
+}
+.el-tree-node.is-focusable .el-tree-node__expand-icon.el-icon-caret-right{
+    font-size: 19px;
+    color: #4389e3;
+}
+.el-tree-node.is-focusable .accountcate{
+    font-size: large;
+    color: #4d4d4d;
+}
+.el-tree-node.is-focusable .el-tree-node__children .accountcate{
+    font-size: 16px;
+    color: #727272;
+}
+.el-tree-node.is-focusable .accountcate{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.el-card__body .fenqi{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

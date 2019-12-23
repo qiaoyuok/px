@@ -1,0 +1,27 @@
+/*登录页面样式*/
+.login-box{
+    width:100%;
+    height: 100vh;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+.user-login{
+    width:420px;
+    height: 360px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.user-login .user-login-input{
+    width:350px;
+}
+.user-login .user-login-but button{
+    width: 350px;
+    height: 45px;
+}
