@@ -69,10 +69,11 @@ class DashboardController extends BaseController
                     //2-3、数量  当前日期初始数量为0；
                     $num = 0;
                     $arr = [];
-                    foreach ($adLogsTmpLegend[$k] as $adlog){
-                        if (date("m月d日",$adlog['created_at']) == $date){
-                            $num++;
-                            array_push($arr,$adlog['id']);
+                    if (isset($adLogsTmpLegend[$k])){
+                        foreach ($adLogsTmpLegend[$k] as $adlog){
+                            if (date("m月d日",$adlog['created_at']) == $date){
+                                $num++;
+                            }
                         }
                     }
                     $series[$legend][] = $num;

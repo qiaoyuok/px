@@ -15,6 +15,7 @@ class DashboardAsset extends AssetBundle
     ];
     public $js = [
         'request/request.js',
+        'js/moment.js',
         'js/echarts.js',
         'dashboard/index.js',
     ];

@@ -11,7 +11,7 @@ $this->title = "广告渠道分析";
 ?>
 
 <div id="app">
-    <div class="filter">
+    <div class="filter ">
         <template>
             <div class="block">
                 <el-date-picker
@@ -26,14 +26,13 @@ $this->title = "广告渠道分析";
                 </el-date-picker>
             </div>
         </template>
-        <el-button style="margin-left: 15px;" icon="el-icon-search" circle></el-button>
     </div>
     <div class="row" style="margin-top: 20px;">
         <div class="col-md-6">
-            <div id="ad-status-echarts" style="width: 100%;height: 400px;"></div>
+            <div id="ad-channel-echarts" style="width: 100%;height: 400px;"></div>
         </div>
         <div class="col-md-6">
-            <div id="ad-channel-echarts" style="width: 100%;height: 400px;"></div>
+            <div id="ad-status-echarts" style="width: 100%;height: 400px;"></div>
         </div>
     </div>
 </div>

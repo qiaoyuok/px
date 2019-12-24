@@ -33,26 +33,34 @@ vm = new Vue({
         time: '',
     },
     created(){
-        this.getAdLogsByStatus();
-        this.getAdLogsByChannel();
+        this.time = [moment().subtract('days',7), moment()];
+    },
+    watch:{
+      time(){
+            this.toSearch();
+      }
     },
     methods:{
-        getAdLogsByStatus(){
+        getAdLogsByStatus(startAt='',endAt = ''){
             var data = {};
             var _that = this;
-            postRequest(controller,'get-ad-logs-by-status',data,function (res) {
+            postRequest(controller,'get-ad-logs-by-status?startAt='+startAt+"&endAt="+endAt,data,function (res) {
                 init(res.data,'ad-status-echarts',"用户广告行为")
             })
         },
-        getAdLogsByChannel(){
+        getAdLogsByChannel(startAt='',endAt = ''){
             var data = {};
             var _that = this;
-            postRequest(controller,'get-ad-logs-by-channel',data,function (res) {
+            postRequest(controller,'get-ad-logs-by-channel?startAt='+startAt+"&endAt="+endAt,data,function (res) {
                 init(res.data,'ad-channel-echarts',"用户来源渠道")
             })
         },
         toSearch(){
-            moment.format()
+            var startTime = moment(this.time[0]).format('YYYY-MM-DD');
+            var endTime = moment(this.time[1]).format('YYYY-MM-DD');
+
+            this.getAdLogsByStatus(startTime,endTime);
+            this.getAdLogsByChannel(startTime,endTime);
         }
     }
 })

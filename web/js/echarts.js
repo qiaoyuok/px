@@ -140,6 +140,13 @@ function init(data,id,title) {
         console.log(index,element);
         option.series.push({name:index,type:"bar",stack:"a",data:element})
     })
-
+    myChart.clear(); // 指定图表的配置项和数据
     myChart.setOption(option);
+
+    $(window).resize(function () {
+        myChart.resize();
+    });
+    $('#' + id).resize(function () {
+        myChart.resize();
+    });
 }

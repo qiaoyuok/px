@@ -12,6 +12,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'defaultRoute' => 'dashboard/index',
     'modules' =>$modules,
     'timeZone' => 'Asia/Shanghai',
     'components' => [

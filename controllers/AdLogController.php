@@ -33,8 +33,8 @@ class AdLogController extends Controller
     {
         $this->response();
         $get = \Yii::$app->request->get();
+        $this->response();
         if (!isset($get['userId']) || !isset($get['wxgamecid'])){
-            $this->response();
             return ['code'=>0,'msg'=>"userId is not exists!"];
         }
 
@@ -45,7 +45,7 @@ class AdLogController extends Controller
         }
 
         $redis->set("userAdLog:".$get['userId'],1);
-        $redis->expire("userAdLog:".$get['userId'],5);
+        $redis->expire("userAdLog:".$get['userId'],2);
 
         $channelInfo = Wxgamecid::find()->where(['wxgamecid'=>$get['wxgamecid']])->asArray()->one();
 

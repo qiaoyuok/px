@@ -49,13 +49,7 @@ use yii\helpers\Url;
                 <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
             </div>
         </div>
-        <div class="header-middle">
-            <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html"
-                 data-fire-event="sidebar-left-toggle">
-                <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
-            </div>
-            <h4><?= $this->title ?></h4>
-        </div>
+
         <!-- start: search & user box -->
         <div class="header-right">
             <!--用户操作区域-->

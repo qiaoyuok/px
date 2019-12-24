@@ -12,6 +12,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <html lang="UTF-8">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="HTML5 Admin Template"/>
+    <meta name="description" content="Porto Admin - Responsive HTML5 Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title><?= $this->title ?></title>
     <?php $this->head() ?>
 </head>
