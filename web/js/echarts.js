@@ -25,12 +25,12 @@ var eColor = [
     "#cda819",
     "#32a487"
 ]
-function init(data,id) {
+function init(data,id,title) {
     var myChart = echarts.init(document.getElementById(id));
     option = {
         title: {
-            text: '世界人口总量',
-            subtext: '数据来自网络',
+            text: title,
+            // subtext: '数据来自网络',
             textStyle: {
                 color: '#666',
                 fontSize: 14,

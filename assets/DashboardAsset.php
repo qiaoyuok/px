@@ -11,7 +11,7 @@ class DashboardAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'menu/menu.css'
+        'dashboard/index.css'
     ];
     public $js = [
         'request/request.js',

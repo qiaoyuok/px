@@ -1,0 +1,11 @@
+.filter{
+    /*background: red;*/
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.el-range-separator{
+    padding: 0 3px !important;
+}
