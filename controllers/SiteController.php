@@ -8,9 +8,9 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\controllers\AdminController;
+use app\controllers\BaseController;
 
-class SiteController extends AdminController
+class SiteController extends BaseController
 {
 
     /**
