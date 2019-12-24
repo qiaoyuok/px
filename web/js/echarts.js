@@ -74,7 +74,7 @@ function init(data,id) {
         grid: {
             left: '3%',
             right: '4%',
-            bottom: 50,
+            bottom: 30,
             containLabel: true
         },
         yAxis: {
@@ -123,7 +123,7 @@ function init(data,id) {
             axisLabel: {
                 // interval: 1,
                 rotate: 50,
-                lineHeight: 56,
+                lineHeight: 36,
                 textStyle: {
                     color: '#A8A8A8' //坐标值得具体的颜色
 
@@ -139,7 +139,6 @@ function init(data,id) {
     $.each(data.series,function (index,element) {
         console.log(index,element);
         option.series.push({name:index,type:"bar",stack:"a",data:element})
-        // option.series.push({name:index,type:"bar",label:{normal:{show:true,position:"top"}},data:element})
     })
 
     myChart.setOption(option);

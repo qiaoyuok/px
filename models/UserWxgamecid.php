@@ -5,19 +5,19 @@ namespace app\models;
 
 use yii\db\ActiveRecord;
 
-class Wxgamecid extends ActiveRecord
+class UserWxgamecid extends ActiveRecord
 {
 
     public function rules()
     {
         return [
-            [['wxgamecid',"alias","status",'created_at'],'required']
+            [['userId','wxgamecid','created_at'],'required']
         ];
     }
 
     public static function tableName()
     {
-        return '{{%wxgamecid}}';
+        return '{{%user_wxgamecid}}';
     }
 
 }

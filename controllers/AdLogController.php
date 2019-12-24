@@ -6,7 +6,7 @@ namespace app\controllers;
 use yii\rest\Controller;
 use yii\filters\AccessControl;
 use app\models\Ad;
-use app\models\Wxgamecid;
+use app\models\UserWxgamecid;
 use yii\web\Response;
 
 class AdLogController extends Controller
@@ -46,12 +46,12 @@ class AdLogController extends Controller
         $redis->set("userAdLog:".$get['userId'],1);
         $redis->expire("userAdLog:".$get['userId'],5);
 
-        $wxgamecidInfo = Wxgamecid::find()->where(['userId'=>$get['userId']])->one();
+        $wxgamecidInfo = UserWxgamecid::find()->where(['userId' => $get['userId']])->one();
 
         if (!empty($wxgamecidInfo)){
             $get['wxgamecid'] = $wxgamecidInfo['wxgamecid'];
         }else{
-            $wxgamecidInfo = new Wxgamecid();
+            $wxgamecidInfo = new UserWxgamecid();
             $wxgamecidInfo->userId = $get['userId'];
             $wxgamecidInfo->wxgamecid = $get['wxgamecid'];
             $wxgamecidInfo->created_at = time();

@@ -6,14 +6,22 @@ vm = new Vue({
 
     },
     created(){
-        this.getAdLogs();
+        this.getAdLogsByStatus();
+        this.getAdLogsByChannel();
     },
     methods:{
-        getAdLogs(){
+        getAdLogsByStatus(){
             var data = {};
             var _that = this;
-            postRequest(controller,'get-ad-logs',data,function (res) {
-                init(res.data,'ad-echarts')
+            postRequest(controller,'get-ad-logs-by-status',data,function (res) {
+                init(res.data,'ad-status-echarts')
+            })
+        },
+        getAdLogsByChannel(){
+            var data = {};
+            var _that = this;
+            postRequest(controller,'get-ad-logs-by-channel',data,function (res) {
+                init(res.data,'ad-channel-echarts')
             })
         }
     }

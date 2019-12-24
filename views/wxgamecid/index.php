@@ -12,11 +12,7 @@ $this->title = "广告渠道分析";
 
 <div id="app">
 
-    <div id="ad-status-echarts" style="width: 600px;height: 400px;">
-
-    </div>
-
-    <div id="ad-channel-echarts" style="width: 600px;height: 400px;">
+    <div id="ad-echarts" style="width: 600px;height: 400px;">
 
     </div>
 
