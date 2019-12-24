@@ -1,25 +1,21 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: 15899
- * Date: 2019/05/11
- * Time: 11:34
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
  */
-
 namespace app\assets;
-
 use yii\web\AssetBundle;
-
-class GoodsAppAsset extends AssetBundle
+class DashboardAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'feedback/css/feedback.css',
+        'menu/menu.css'
     ];
     public $js = [
         'request/request.js',
-        'goods/index/goods-index.js',
+        'dashboard/index.js',
     ];
     public $depends = [
         'app\assets\AppAsset',

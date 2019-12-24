@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/common-components.js',
+        'js/echarts.min.js',
         'js/moment.js',
     ];
     public $depends = [

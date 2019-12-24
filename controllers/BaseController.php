@@ -17,8 +17,8 @@ use yii\helpers\ArrayHelper;
 
 class BaseController extends Controller
 {
-    const ACCESS_KEY = "LGjg8n_jNgPKteD2S3Q55LLARnN6g7_JRbL0SgJf";
-    const SECRET_KEY = "4WCOQTWbJNKkybAdtq3sr5h0QL14y7yblP9HtMxP";
+    const ACCESS_KEY = "111";
+    const SECRET_KEY = "111";
     const BUCKET_NAME = "image";
     public static $menus;
     public function init()

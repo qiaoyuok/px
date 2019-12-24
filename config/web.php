@@ -13,6 +13,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'modules' =>$modules,
+    'timeZone' => 'Asia/Shanghai',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -52,15 +53,8 @@ $config = [
         'redis'=>[
             'class' => 'yii\redis\Connection',
             'hostname' => '127.0.0.1',
-            'port' => 6379,
+            'port' => 63379,
             'database' => 0,
-        ],
-
-        'freevip_redis'=>[
-            'class' => 'yii\redis\Connection',
-            'hostname' => '127.0.0.1',
-            'port' => 6379,
-            'database' => 1,
         ],
 
         'urlManager' => [
