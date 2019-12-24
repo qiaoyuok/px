@@ -11,7 +11,7 @@ class Ad extends ActiveRecord
     public function rules()
     {
         return [
-            [['userId','status','wxgamecid','created_at'],'required'],
+            [['userId','status','channelId','created_at'],'required'],
             ['status','integer']
         ];
     }

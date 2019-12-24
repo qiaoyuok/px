@@ -40,8 +40,10 @@ class DashboardController extends BaseController
         $loop = ($endTime-$startTime)/86400;
 
         $adLogsTmp = Ad::find()
-            ->where(['and',[">=","created_at",$startTime],["<=","created_at",$endTime]])
-            ->orderBy("created_at asc")
+            ->alias("a")
+            ->leftJoin("{{%wxgamecid}} as w","a.channelId = w.id")
+            ->where(['and',[">=","a.created_at",$startTime],["<=","a.created_at",$endTime]])
+            ->orderBy("a.created_at asc")
             ->asArray()
             ->all();
 
@@ -96,11 +98,13 @@ class DashboardController extends BaseController
         $loop = ($endTime-$startTime)/86400;
 
         $adLogsTmp = Ad::find()
-            ->where(['and',[">=","created_at",$startTime],["<=","created_at",$endTime]])
-            ->orderBy("created_at asc")
+            ->alias("a")
+            ->select("a.*,w.alias")
+            ->leftJoin("{{%wxgamecid}} as w","a.channelId = w.id")
+            ->where(['and',[">=","a.created_at",$startTime],["<=","a.created_at",$endTime]])
+            ->orderBy("a.created_at asc")
             ->asArray()
             ->all();
-
         $this->response();
 
         $channel = Wxgamecid::find()->where(['status'=>1])->asArray()->all();

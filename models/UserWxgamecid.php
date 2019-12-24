@@ -11,7 +11,7 @@ class UserWxgamecid extends ActiveRecord
     public function rules()
     {
         return [
-            [['userId','wxgamecid','created_at'],'required']
+            [['userId','channelId','created_at'],'required']
         ];
     }
 
