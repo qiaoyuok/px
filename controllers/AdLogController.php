@@ -69,6 +69,8 @@ class AdLogController extends Controller
             $wxgamecidInfo->channelId = $channelId;
             $wxgamecidInfo->created_at = time();
             $wxgamecidInfo->save();
+        }else{
+            $channelId = $wxgamecidInfo->channelId;
         }
 
         $adLog = new Ad();

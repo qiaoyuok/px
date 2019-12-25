@@ -42,7 +42,7 @@ use yii\helpers\Url;
         <div class="logo-container">
             <a href="../" class="logo"> <img src="/assets/images/logo.png" height="35" alt="Porto Admin"/> </a>
 
-            <h3>By Rain</h3>
+            <h3>消灭像素</h3>
 
             <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
                  data-fire-event="sidebar-left-opened">
@@ -61,7 +61,7 @@ use yii\helpers\Url;
                              data-lock-picture="/assets/images/logo.png"/>
                     </figure>
                     <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                        <span class="name">John Doe Junior</span> <span class="role">administrator</span>
+                        <span class="name">Admin</span> <span class="role">administrator</span>
                     </div>
 
                     <i class="fa custom-caret"></i> </a>
@@ -69,14 +69,6 @@ use yii\helpers\Url;
                 <div class="dropdown-menu">
                     <ul class="list-unstyled">
                         <li class="divider"></li>
-                        <li>
-                            <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i
-                                        class="fa fa-user"></i> My Profile</a>
-                        </li>
-                        <li>
-                            <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i
-                                        class="fa fa-lock"></i> Lock Screen</a>
-                        </li>
                         <li>
                             <a role="menuitem" tabindex="-1" href="<?= Url::to(['login/out']) ?>"><i
                                         class="fa fa-power-off"></i> Logout</a>

@@ -11,7 +11,7 @@ class Wxgamecid extends ActiveRecord
     public function rules()
     {
         return [
-            [['wxgamecid',"alias","status",'created_at'],'required']
+            [['wxgamecid',"alias",'created_at'],'required']
         ];
     }
 

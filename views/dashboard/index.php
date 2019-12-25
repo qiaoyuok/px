@@ -7,7 +7,7 @@
  */
 use app\assets\DashboardAsset;
 DashboardAsset::register($this);
-$this->title = "广告渠道分析";
+$this->title = "统计";
 ?>
 
 <div id="app">
