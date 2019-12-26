@@ -66,7 +66,7 @@ function init(data,id,title) {
         toolbox: {
             feature: {
                 dataView: {show: true, readOnly: false},
-                magicType: {show: true, type: ['line', 'bar']},
+                magicType: {show: true, type: ['line', 'bar','stack','tiled'],option:{line:{stack:null}}},
                 restore: {show: true},
                 saveAsImage: {show: true}
             }
@@ -131,6 +131,14 @@ function init(data,id,title) {
             },
         },
         color: eColor,
+        iconStyle: {
+            "normal": {
+                "borderColor": "#ccc"
+            },
+            "emphasis": {
+                "borderColor": "#18a4a6"
+            }
+        },
         series: [
 
         ]

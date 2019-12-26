@@ -28,10 +28,10 @@ $this->title = "统计";
         </template>
     </div>
     <div class="row" style="margin-top: 20px;">
-        <div class="col-md-6">
+        <div class="col-md-6" style="margin-bottom: 30px;">
             <div id="ad-channel-echarts" style="width: 100%;height: 400px;"></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="margin-bottom: 30px;">
             <div id="ad-status-echarts" style="width: 100%;height: 400px;"></div>
         </div>
     </div>
